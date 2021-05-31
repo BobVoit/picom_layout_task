@@ -1,0 +1,28 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 8rem 8rem 8rem;
+    grid-template-areas:
+    "fullname company"
+    "phonenumber message"
+    "email message";
+}
+
+.grid__fullname {
+    grid-area: fullname;
+}
+
+.grid__phonenumber {
+    grid-area: phonenumber;
+}
+
+.grid__email {
+    grid-area: email;
+}
+
+.grid__company {
+    grid-area: company;
+}
+.grid__message {
+    grid-area: message;
+}

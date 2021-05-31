@@ -1,0 +1,29 @@
+.popular {
+    width: 100%;
+    margin-top: 8rem;
+}
+
+.popular__head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular__link {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 4rem;
+        height: 4rem;
+        margin-left: -0.3rem;
+
+    }
+}
+
+.popular__images {
+    display: flex;
+    margin-top: 6.2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

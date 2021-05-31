@@ -1,0 +1,36 @@
+.present {
+    width: 100%;
+    position: relative;
+    height: 63.4rem;
+}
+
+.present__container {
+    width: 100%;
+}
+
+.present__wrapper {
+    width: 100%;
+    position: absolute;
+    margin-top: 15rem;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.present__title {
+    white-space: nowrap;
+    color: #333;
+}
+
+.present__subtitle {
+    display: flex;
+    align-items: center;
+    width: 50rem;
+    height: 5rem;
+    padding-left: 2rem;
+    margin-top: 3.5rem;
+
+    color: #333;
+    border-left: 2px solid map-get($colors, primary);
+}
+

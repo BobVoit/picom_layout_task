@@ -1,0 +1,127 @@
+%headline-settings {
+    font-weight: 700;
+    font-family: $panton;
+    color: map-get($colors, black);
+}
+
+// создает медиа выражения для разные размеры экранов
+// размеры шрифта
+@mixin headlinesFZ($desk-m, $desk-l, $desk-s, $tab, $mob) {
+    font-size: $desk-m;
+
+    @media (max-width: $desktop-l) {
+        font-size: $desk-m;
+    }
+
+    @media (max-width: $desktop-m) {
+        font-size: $desk-l;
+    }
+
+    @media (max-width: $desktop-s) {
+        font-size: $desk-s;
+    }
+
+    @media (max-width: $tablet) {
+        font-size: $tab;
+    }
+
+    @media (max-width: $mobile) {
+        font-size: $mob;
+    }
+}
+
+// создает медиа выражения для разные размеры экранов
+// межстрочное растояние
+@mixin headlinesLN($desk-m, $desk-l, $desk-s, $tab, $mob) {
+    line-height: $desk-m;
+
+    @media (max-width: $desktop-l) {
+        line-height: $desk-m;
+    }
+
+    @media (max-width: $desktop-m) {
+        line-height: $desk-l;
+    }
+
+    @media (max-width: $desktop-s) {
+        line-height: $desk-s;
+    }
+
+    @media (max-width: $tablet) {
+        line-height: $tab;
+    }
+
+    @media (max-width: $mobile) {
+        line-height: $mob;
+    }
+}
+
+.mega {
+    @extend %headline-settings;
+    @include headlinesFZ(5.6rem, 4.8rem, 4.8rem, 3.2rem, 2.4rem);
+    @include headlinesLN(6.8rem, 6rem, 6rem, 4.8rem, 3.2rem);
+}
+
+.h1 {
+    @extend %headline-settings;
+    @include headlinesFZ(4.8rem, 3.2rem, 3.2rem, 2.4rem, 2rem);
+    @include headlinesLN(6rem, 3.2rem, 3.2rem, 2.4rem, 2rem);
+}
+
+.h2 {
+    @extend %headline-settings;
+    @include headlinesFZ(3.2rem, 2.4rem, 2.4rem, 1.8rem, 1.8rem);
+    @include headlinesLN(3.2rem, 3.2rem, 2.4rem, 2.4rem, 2rem);
+}
+
+.h3 {
+    @extend %headline-settings;
+    @include headlinesFZ(2.4rem, 1.8rem, 1.8rem, 1.8rem, 1.8rem);
+    @include headlinesLN(2.4rem, 2rem, 2rem, 2rem, 2rem);
+}
+
+.h4 {
+    @extend %headline-settings;
+    @include headlinesFZ(1.8rem, 1.8rem, 1.8rem, 1.8rem, 1.8rem);
+    @include headlinesLN(2rem, 2rem, 2rem, 2rem, 2rem);
+}
+
+.text-body {
+    
+    &--xl {
+        font-family: $roboto;
+        font-size: 2.8rem;
+        line-height: 4rem;
+    }
+
+    &--l {
+        font-family: $roboto;
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+    }
+
+    &--m {
+        font-family: $roboto;
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+    }
+
+    &--s {
+        font-family: $roboto;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+}
+
+
+.link-nav {
+    color: map-get($colors, primary);
+    font-weight: 500;
+    font-size: 1.8rem;  
+    line-height: 3.24rem;
+
+    &:hover, &:active {
+        text-decoration: underline;
+    }
+
+}

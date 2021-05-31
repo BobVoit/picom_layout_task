@@ -1,0 +1,56 @@
+.contact {
+    width: 47.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.7rem 0 4.8rem 0;
+
+    font-family: $roboto;
+    color: map-get($colors, black);
+
+    background-color: map-get($colors, white);
+}
+
+.contact__title {
+    display: inline-block;
+
+    font-weight: 900;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+}
+
+.contact__number {
+
+    font-weight: 700;
+    font-size: 3.2em;
+    line-height: 4.8rem;
+}
+
+.contact__mail {
+
+    line-height: 3.4rem;
+    font-size: 2.4rem;  
+}
+
+.contact__avatar {
+    margin-top: 3.4em;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.contact__name {
+    margin-top: 2.3rem;
+
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+}
+
+.contact__position {
+    margin-top: 0.5rem;
+
+    font-size: 1.6rem;
+    line-height: 1.875rem;
+}

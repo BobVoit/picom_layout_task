@@ -166,6 +166,15 @@ gulp.task("svgSprite", function() {
             example: true,
           },
         },
+        shape: {
+          dimension: {
+            maxHeight: 300,
+            maxWidth: 300,
+          },
+          spacing: {
+            box: "icon" 
+          }
+        }
       })
     )
     .pipe(dest(path.build.img));

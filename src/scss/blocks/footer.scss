@@ -1,0 +1,96 @@
+.footer {
+    margin: 3.7rem 0 7.1rem 0;
+
+    font-family: $arimo;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.footer__head {
+    padding-top: 8rem;
+}
+
+.footer__logo {
+    max-width: 22.9rem;
+    max-height: 6.5rem;
+    margin-top: 1.9rem;
+}
+
+.footer__social {
+    display: flex;
+
+
+    &:first-child,
+    &:last-child {
+        margin-right: 0;
+    }
+
+    img {
+        margin-right: 1rem;
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+.footer__content {
+    padding: 4.2rem 0 10rem 0;
+}
+.footer__cotnacts-item {
+    line-height: 2.88rem;
+
+    img {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-right: 1.033rem;
+    }
+}
+
+.footer__contacts-top {
+    margin-bottom: 2rem;
+}
+
+.footer__subtitle {
+
+    font-family: $roboto;
+    font-weight: 700;
+    line-height: 3.84rem;
+}
+
+.footer__link {
+    display: block;
+
+    color: inherit;
+    line-height: 3.84rem;
+}
+
+.footer__download {
+    color: map-get($colors, primary);
+    line-height: 3.84rem;
+    img {
+        display: inline;
+        vertical-align: middle;
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: 1rem;
+    }
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 3.7rem 0 3.8rem;
+    color: map-get($colors, dark-gray);
+
+    border-top: 1px solid map-get($colors, brown);
+}
+
+.footer__reserved {
+}
+
+.footer__dev {
+
+    a {
+        color: map-get($colors, primary);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}

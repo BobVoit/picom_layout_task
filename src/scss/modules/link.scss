@@ -26,6 +26,8 @@
         background-color: map-get($colors, primary);
     }
 
+    transition: color 0.2s linear;
+
     &:hover, &:active {
         color: map-get($colors, black);
     }

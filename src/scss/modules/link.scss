@@ -6,6 +6,26 @@
     }
 }
 
+.link--go-over {
+    display: flex;
+    align-items: center;
+
+    color: map-get($colors, primary);
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 32.4px;
+
+    span {
+        display: block;
+    }
+
+    img {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-left: 1rem;
+        margin-bottom: -0.5rem;
+    }
+}
 
 .link--mail {
     position: relative;

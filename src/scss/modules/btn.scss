@@ -1,28 +1,10 @@
-.btn-submit {
-    display: inline-block;
-    padding: 1.125em 4.21em;
-
-    color: map-get($colors, white);
-
-    border-radius: 4px;
-    background-color: map-get($colors, primary);
-
-    &::before {
-        height: 100%;
-    }
-
-    &:hover {
-
-
-    }
-}
-
-
-.btn-arrow {
+@mixin btn-arrow-create {
     position: relative;
     width: 6.4rem;  
     height: 6.4rem;  
+
     background-color: map-get($colors, primary);
+    border-radius: 4px;
 
     transition: background-color .2s linear;
 
@@ -75,5 +57,63 @@
     &:hover, &:active {
         background-color: map-get($colors, black);
     }
+}
 
+@mixin btn-arrow-create--right {
+    &::after, &::before {
+        right: 40%;
+    }
+
+    &::after {
+        top: 56%;
+
+        transform: rotate(-45deg);
+    }
+
+    &::before {
+        top: 45%;
+
+        transform: rotate(45deg);
+    }
+}
+
+@mixin btn-arrow-create--left {
+    &::after, &::before {
+        left: 40%;
+    }
+    &::after {
+        top: 56%;
+
+        transform: rotate(45deg);
+    }
+
+    &::before {
+        top: 45%;
+
+        transform: rotate(-45deg);
+    }
+}
+
+.btn-submit {
+    display: inline-block;
+    padding: 1.125em 4.21em;
+
+    color: map-get($colors, white);
+
+    border-radius: 4px;
+    background-color: map-get($colors, primary);
+
+    &::before {
+        height: 100%;
+    }
+
+    &:hover {
+
+
+    }
+}
+
+
+.btn-arrow {
+    @include btn-arrow-create;
 }

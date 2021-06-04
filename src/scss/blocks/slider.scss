@@ -66,24 +66,32 @@
         // top: 72%;
         z-index: 10;
 
+        font-size: 0;
+
         background-color: map-get($colors, primary);
         border: none;
     }
 
-    & .slick-arrow.slick-prev{
-        // &::before {
-        //     // content: url('../img/icons/icons.svg#arrow-right')
-        //     position: absolute;
-        //     content: "";
-        //     width: 12.8px;
-        //     z-index: 11;
-
-        //     color: #333;
-        // }
+    & .slick-arrow.slick-prev {
+        @include btn-arrow-create;
+        @include btn-arrow-create--left;
     }
 
     & .slick-arrow.slick-next{
+        @include btn-arrow-create;
+        @include btn-arrow-create--right;
     }
+
+    /* Точки (булиты) */
+    & .slick-dots{}
+
+    & .slick-dots li{}
+
+    /* Активная точка */
+    & .slick-dots li.slick-active{}
+
+    /* Элемент точки */
+    & .slick-dots li button{}
 
 }
 

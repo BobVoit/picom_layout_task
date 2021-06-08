@@ -36,7 +36,17 @@
     margin-top: 7.2rem;
 
     button {
-        border-radius: 4px;
+        font-size: 0;
+    }
+
+    & .slick-arrow.slick-prev {
+        @include btn-arrow-create;
+        @include btn-arrow-create--left;
+    }
+
+    & .slick-arrow.slick-next{
+        @include btn-arrow-create;
+        @include btn-arrow-create--right;
     }
 }
 

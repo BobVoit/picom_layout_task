@@ -1,0 +1,56 @@
+.progress-bar {
+    width: 6.4rem;
+    height: 6.4rem;
+    display: flex;
+}
+
+.progress-bar__circle {
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset .3s linear;
+
+    outline: none;
+}
+
+.progress-bar {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+
+    border-radius: 50%;
+    border: 2px solid map-get($colors, dark-gray);
+    background: transparent; 
+    overflow: hidden; 
+}
+
+// .progress-bar__progress {
+//     // display: flex;
+//     // justify-content: center;
+//     // align-items: center;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     // margin: 0.2em;
+
+//     border-radius: 50%; 
+//     background: transparent; 
+
+//     font-weight: 700;
+//     font-size: 1.6rem;
+//     line-height: 18.75px;
+//     color: map-get($colors, white);
+// }
+
+// .progress-bar__inside {
+//     height: 11rem; 
+//     width: 22rem; 
+//     background: map-get($colors, primary); 
+//     position: absolute; 
+//     top:-11rem; 
+//     left: -6rem; 
+//     transform: rotate(30deg); 
+//     transform-origin: 110px 110px; 
+//     transition: all .3s;
+// }

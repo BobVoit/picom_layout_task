@@ -8,7 +8,8 @@ $colors: (
     brown: #363131,
     black: #191919,
     error: #FF0101,
-    focus-browser: #2078FD
+    focus-browser: #2078FD,
+    shadow-color: #0000006b
 );
 $roboto: 'Roboto', sans-serif;  
 $noto-sans: 'Noto Sans', sans-serif;
@@ -16,8 +17,8 @@ $panton: 'Panton', sans-serif;
 $arimo: 'Arimo', sans-serif;
 
 
-$desktop-l: 1920px;
+$desktop-l: 1824px;
 $desktop-m: 1224px;
-$desktop-s: 1060px;
-$tablet: 860px;
-$mobile: 600px;
+$desktop-s: 918px;
+$tablet: 768px;
+$mobile: 480px;

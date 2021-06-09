@@ -118,7 +118,7 @@
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
 
-        transition: all 0.3s linear;
+        transition: all 0.2s linear;
     }
 
     &:hover {
@@ -141,4 +141,57 @@
 
 .btn-arrow {
     @include btn-arrow-create;
+}
+
+.btn-help {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.4rem;
+    height: 6.4rem;
+
+    border-radius: 50%;
+
+    transition: all 0.2s linear;
+
+    span {
+        transition: all 0.2s linear;
+        background-color: map-get($colors, white);
+        
+        @media (max-width: $mobile) {
+            width: 1.87rem;
+            height: 1.87rem;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    &:hover {
+        background-color: map-get($colors, white);
+    }
+
+    &--primary {
+        background-color: map-get($colors, primary);
+
+        &:hover {
+            span {
+                background-color: map-get($colors, primary);
+            }
+        }
+    }
+
+    &--black {
+
+        background-color: map-get($colors, black);
+
+        &:hover {
+            span {
+                background-color: map-get($colors, black);
+            }
+        }
+    }
+
 }

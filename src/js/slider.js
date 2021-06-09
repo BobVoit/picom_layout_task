@@ -48,10 +48,8 @@ $(document).ready(function() {
         appendArrows: $('.present__arrows'),
         appendDots: $('.present__dots'),
         customPaging: createCustomDot,
+        draggable: false
     });
-})
-
-$(document).ready(function() {
     $('.collection-slider').slick({
         appendArrows: $('.collection__arrows'),
     });

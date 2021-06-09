@@ -8,6 +8,10 @@
 .order__container {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+    }
 }
 
 .order__create-order {

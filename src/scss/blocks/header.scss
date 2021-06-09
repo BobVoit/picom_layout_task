@@ -91,10 +91,10 @@
         justify-content: flex-start;
         align-items: flex-end;
 
-        transition: all 0.3s ease 0s;
+        transition: all 0.3s linear;
 
         & .header__panel {
-            width: 50%;
+            width: 30rem;
             height: 100%;
             display: flex;
             flex-direction: column;

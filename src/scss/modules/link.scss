@@ -13,7 +13,7 @@
     color: map-get($colors, primary);
     font-weight: 500;
     font-size: 1.8rem;
-    line-height: 32.4px;
+    line-height: 3.24rem;
 
     span {
         display: block;
@@ -25,6 +25,27 @@
         margin-left: 1rem;
         margin-bottom: -0.5rem;
     }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: $mobile) {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+    }
+}
+
+.link-nav {
+    color: map-get($colors, primary);
+    font-weight: 500;
+    font-size: 1.8rem;  
+    line-height: 3.24rem;
+
+    &:hover, &:active {
+        text-decoration: underline;
+    }
+
 }
 
 .link--mail {

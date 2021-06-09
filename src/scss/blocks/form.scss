@@ -44,6 +44,9 @@
     left: 3rem;
     top: 50%;
 
+    user-select: none;
+    cursor: text;
+
     color: map-get($colors, dark-gray);
     font-size: 1.6rem;
 

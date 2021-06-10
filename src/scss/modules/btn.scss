@@ -83,7 +83,7 @@
     }
     &::after {
         top: 56%;
-
+        
         transform: rotate(45deg);
     }
 
@@ -105,6 +105,10 @@
     background-color: map-get($colors, primary);
 
     transition: all 0.3s linear;
+
+    @media (max-width: $mobile) {
+        padding: 1em 3.5em;
+    }
 
     &::before {
         content: "";

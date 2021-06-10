@@ -52,10 +52,34 @@
 }
 
 .footer__subtitle {
-
     font-family: $roboto;
     font-weight: 700;
     line-height: 3.84rem;
+
+    @media (max-width: $desktop-s) {
+        
+        &:hover {
+            & + .footer__items {
+                display: block;
+                padding: 1rem 2rem;
+                top: 0;
+                right: 0;
+
+                box-shadow: 0px 5px 20px 17px rgba(34, 60, 80, 0.2);
+            }
+        }
+    }
+}
+
+.footer__col {
+    position: relative;
+}
+
+.footer__items {
+
+    @media (max-width: $desktop-s) {
+        display: none;
+    }
 }
 
 .footer__link {
@@ -63,6 +87,12 @@
 
     color: inherit;
     line-height: 3.84rem;
+}
+
+.footer__navbar {
+    width: 100%;
+    display: flex;  
+    // justify-content: space-between;
 }
 
 .footer__download {

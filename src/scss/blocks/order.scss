@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $desktop-s) {
         flex-direction: column;
     }
 }
@@ -23,4 +23,17 @@
 }
 
 .order__contact {
+    height: 100%;
+
+    @media (max-width: $desktop-m) {
+        margin-left: 1rem;
+    }
+
+    @media (max-width: $desktop-s) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-left: 0;
+    }
 }

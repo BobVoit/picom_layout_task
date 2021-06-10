@@ -1,0 +1,51 @@
+.order-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 8rem 8rem 8rem;
+    grid-template-areas:
+    "fullname company"
+    "phonenumber message"
+    "email message";
+
+    @media (max-width: $mobile) {
+        display: block;
+    }
+
+    & > * {
+        margin-bottom: 1px;
+
+        @media (max-width: $tablet) {
+            height: 7rem;
+        }
+    }
+
+    & > .order-display__message {
+
+        @media (max-width: $tablet) {
+            height: 14rem;
+        }
+    }
+
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.order-display__fullname {
+    grid-area: fullname;
+}
+
+.order-display__phonenumber {
+    grid-area: phonenumber;
+}
+
+.order-display__email {
+    grid-area: email;
+}
+
+.order-display__company {
+    grid-area: company;
+}
+.order-display__message {
+    grid-area: message;
+}

@@ -118,6 +118,11 @@
         flex-direction: column;
         margin-top: 12rem;
     }
+
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        margin-top: 18rem;
+    }
 }
 
 .present__dots {

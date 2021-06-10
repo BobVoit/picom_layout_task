@@ -4,4 +4,12 @@
 
 .best-clothes__text {
     margin-top: 3.4rem;
+
+    a {
+        word-break: break-all;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }

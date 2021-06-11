@@ -2696,6 +2696,13 @@ picture {
   .footer__logo {
     margin-right: 2rem;
   }
+
+  .footer__subtitle {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
 }
 
 @media (max-width: 480px) {

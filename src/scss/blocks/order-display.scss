@@ -14,14 +14,14 @@
     & > * {
         margin-bottom: 1px;
 
-        @media (max-width: $tablet) {
+        @media (max-width: $mobile) {
             height: 7rem;
         }
     }
 
     & > .order-display__message {
 
-        @media (max-width: $tablet) {
+        @media (max-width: $mobile) {
             height: 14rem;
         }
     }

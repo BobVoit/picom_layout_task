@@ -111,4 +111,10 @@
         max-width: none;
         max-height: none;
     }
+
+    @media (max-width: $mobile) {
+        max-width: none;
+        max-height: none;
+        height: 50rem;
+    }
 }

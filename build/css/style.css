@@ -597,6 +597,8 @@ picture {
 .header {
   width: 100%;
   height: 10rem;
+  position: relative;
+  background-color: #FFFFFF;
   color: #363131;
   font-family: "Noto Sans", sans-serif;
 }
@@ -1716,9 +1718,9 @@ picture {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: all .2s linear;
-  -o-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  transition: all .1s linear;
 }
 
 .form__input,
@@ -2605,6 +2607,20 @@ picture {
 
   .h4 {
     line-height: 2rem;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    -webkit-transition: top 0.3s linear;
+    -o-transition: top 0.3s linear;
+    transition: top 0.3s linear;
+  }
+
+  .header.hide {
+    top: -10rem;
   }
 
   .header__link {

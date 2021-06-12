@@ -15,7 +15,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    @media (max-width: $desktop-s) {
+    @media (max-width: $desktop-m) {
         justify-content: space-around;
     }
 
@@ -31,7 +31,8 @@
     display: flex;
     justify-content: center;
 
-    @media (max-width: $desktop-s) {
+    @media (max-width: $desktop-m) {
+        width: 50%;
         margin: 2rem 0;
     }
 

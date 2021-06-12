@@ -4,24 +4,24 @@
     display: flex;
 }
 
-.progress-bar__circle {
-    transform-origin: center;
-    transform: rotate(-90deg);
-    transition: stroke-dashoffset .3s linear;
+// .progress-bar__circle {
+//     transform-origin: center;
+//     transform: rotate(-90deg);
+//     transition: stroke-dashoffset .3s linear;
 
-    outline: none;
-}
+//     outline: none;
+// }
 
-.progress-bar {
-    position: relative;
-    width: 6rem;
-    height: 6rem;
+// .progress-bar {
+//     position: relative;
+//     width: 6rem;
+//     height: 6rem;
 
-    border-radius: 50%;
-    border: 2px solid map-get($colors, dark-gray);
-    background: transparent; 
-    overflow: hidden; 
-}
+//     border-radius: 50%;
+//     border: 2px solid map-get($colors, dark-gray);
+//     background: transparent; 
+//     overflow: hidden; 
+// }
 
 // .progress-bar__progress {
 //     // display: flex;

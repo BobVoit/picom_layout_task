@@ -14,8 +14,6 @@
     height: 100%;
     position: relative;
 
-    // border: 1px solid map-get($colors, frame-line);
-
     &--is-active {
         .form__label {
             @include label-active;

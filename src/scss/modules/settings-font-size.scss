@@ -103,6 +103,16 @@
             font-size: 1.8rem;
             line-height: 3.2rem;
         }
+
+        @media (max-width: $desktop-s) {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+        }
+
+        @media (max-width: $tablet) {
+            font-size: 1.8rem;
+            line-height: 3rem;
+        }
     }
 
     &--m {

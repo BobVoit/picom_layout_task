@@ -1,45 +1,48 @@
 
 
 function createCustomDot (slider, i) {
-    const wrapper = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    wrapper.setAttribute('width', 64);
-    wrapper.setAttribute('height', 64);
-    wrapper.setAttribute('viewBox', '0 0 64 64');   
-    wrapper.setAttribute('fill', '#7E8385');
-    wrapper.classList.add('progress-bar');
+    const canvas = document.createElement('canvas'); // создаем канвас
+    canvas.classList.add('progress-bar');
+    canvas.setAttribute('width', 64); 
+    canvas.setAttribute('height', 64);
 
-    const circle = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "circle",
-    );
-    circle.setAttribute('stroke', '#7E8385');
-    circle.setAttribute('stroke-width', 2);
-    circle.setAttribute('fill', 'transparent');
-    circle.setAttribute('cx', 32);
-    circle.setAttribute('cy', 32);
-    circle.setAttribute('r', 28);
-    circle.classList.add('progress-bar__circle');
-    wrapper.appendChild(circle);
+    const context = canvas.getContext('2d'); // контекст
+    context.lineCap = 'round';
 
-    // const wrapper = document.createElement('div');
-    // wrapper.classList.add('progress-bar');
 
-    // const progress = document.createElement('button');
-    // progress.classList.add('progress-bar__progress');
-    // progress.innerHTML = `0${i + 1}`;
-    // wrapper.appendChild(progress);
+    function arcMove() {
+        const posX = canvas.width / 2;
+        const posY = canvas.height / 2;
+        const fps = 1000 / 200;
+        let procent = 0;
+        const oneProcent = 360 / 100;
+        const result = oneProcent * 64;
+        let deegres = 0;
+        const acrInterval = setInterval (function() {
+            deegres += 1;
+            context.clearRect( 0, 0, can.width, can.height );
+            procent = deegres / oneProcent;
 
-    // const inside = document.createElement('div');
-    // inside.classList.add('progress-bar__inside');
-    // wrapper.appendChild(inside);
+            context.beginPath();
+            context.arc(posX, posY, 70, (Math.PI / 180) * 270, (Math.PI / 180) * (270 + 360));
+            context.strokeStyle = '#b1b1b1';
+            context.lineWidth = '10';
+            context.stroke();
 
-    // const progressValue = 30;
-    // progress.addEventListener('mousemove', () => {
-    //     progressValue += 10;
-    //     inside.style.transform = 'rotate('+progressValue+'deg)';
-    // })
+            context.beginPath();
+            context.strokeStyle = '#3949AB';
+            context.lineWidth = '10';
+            context.arc(posX, posY, 70, (Math.PI / 180) * 270, (Math.PI / 180) * (270 + deegres));
+            context.stroke();
+            if(deegres >= result) {
+                clearInterval(acrInterval);
+            }
+        }, fps);
+    }
 
-    return wrapper;
+    // arcMove();
+
+    return canvas;
 }
 
 $(document).ready(function() {
@@ -53,14 +56,4 @@ $(document).ready(function() {
     $('.collection-slider').slick({
         appendArrows: $('.collection__arrows'),
     });
-})
-
-// function (slider, i) {
-//     const wrapper = document.createElement('div');
-//     wrapper.classList.add('slick-dots__body');
-//     const element = document.createElement('button');
-//     element.innerHTML = '0' + (i + 1);
-
-//     wrapper.appendChild(element);
-//     return wrapper;
-// }
+});

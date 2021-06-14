@@ -133,21 +133,29 @@
         &::after {
             right: 0;
             top: 50%;
-    
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 10px 5px 0 5px;
-            border-color: #000333 transparent transparent transparent;
-    
-            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
 
-            transition: transform 0.3s linear;
+            background-color: transparent;
+            border-left: 2px solid map-get($colors, brown);
+            border-bottom: 2px solid map-get($colors, brown);
+            border-bottom-left-radius: 1px;
+    
+            transform: rotate(-45deg);
+
+            transition: transform 0.3s linear, border-color 0.3s linear;
         }
 
-        &:hover{
+        &:hover {
             &::after {
-                transform: translateY(-50%) rotate(180deg);
+                border-color: map-get($colors, primary);
+            }
+        } 
+
+        &.active {
+            &::after {
+                transform: translateY(-50%) rotate(135deg);
+                border-color: map-get($colors, primary);    
             }
 
             & .footer__items {
@@ -178,7 +186,11 @@
                     }
                 }
             }
-        }  
+        }
+
+        &:focus-visible {
+            outline: 1px solid map-get($colors, focus-browser);
+        }
     }
 }
 
@@ -188,7 +200,7 @@
     font-size: 1.6rem;
     line-height: 3.84rem;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $desktop-s) {
         user-select: none;
     }
 }
@@ -201,7 +213,7 @@
 }
 
 .footer__link {
-    display: block;
+    display: inline-block;
 
     color: inherit;
     line-height: 3.84rem;
@@ -212,16 +224,38 @@
 }
 
 .footer__download {
-    display: block;
+    display: inline-block;
     align-items: center;
     color: map-get($colors, primary);
     line-height: 3.84rem;
+    position: relative;
+
     img {
         display: inline;
         vertical-align: middle;
         width: 2.4rem;
         height: 2.4rem;
         margin-right: 1rem;
+    }
+
+    &::before {
+        content: "";
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+
+        background-color: map-get($colors, primary);
+    }
+
+    &:hover {
+
+        &::before {
+            display: block;
+
+        }
     }
 }
 

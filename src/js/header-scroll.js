@@ -1,4 +1,4 @@
-(function () {
+(function() {
     const header = document.querySelector('.header');
     let prevScrollPosition = window.pageYOffset;
     window.addEventListener('scroll', () => {
@@ -10,4 +10,4 @@
         }
         prevScrollPosition = currentScrollPosition;
     })
-})()
+})();

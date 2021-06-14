@@ -1,0 +1,26 @@
+.content {
+    padding-top: 4.1rem;
+    padding-bottom: 4.7rem;
+}
+
+.content__url-address {
+    margin-bottom: 2rem;
+
+    color: map-get($colors, black);
+    font-weight: 300;
+    font-style: italic; 
+    font-size: 1.4rem;
+    line-height: 2.52rem;
+
+    a {
+        color: inherit;
+
+        &:active {
+            color: map-get($colors, dark-gray);
+        }
+
+        &:focus {
+            outline: 1px solid map-get($colors, focus-browser);
+        }
+    }
+}

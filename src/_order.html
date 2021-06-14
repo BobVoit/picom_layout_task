@@ -6,16 +6,18 @@
             </h4>
             <form class="form order__form" action="#">
                 <div class="order-display form__fields">
-                    <div class="order-display__fullname form__field">
+                    <div class="order-display__fullname form__field form__field--required">
                         <div class="form__control">
                             <label for="order-fullname" class="form__label">ФИО<span class="star--red">*</span></label>
-                            <input required id="order-fullname" class="form__fullname form__input" type="text">
+                            <input id="order-fullname" class="form__fullname form__input" type="text">
+                            <span class="form__error">Обязательное поле!</span>    
                         </div>
                     </div>
-                    <div class="order-display__phonenumber form__field">
+                    <div class="order-display__phonenumber form__field form__field--required">
                         <div class="form__control">
                             <label for="order-phonenumber" class="form__label">Телефон<span class="star--red">*</span></label>
-                            <input required id="order-phonenumber" class="form__phonenumber form__input" type="text">
+                            <input id="order-phonenumber" class="form__phonenumber form__input" type="text">
+                            <span class="form__error">Обязательное поле!</span>        
                         </div>
                     </div>
                     <div class="order-display__email form__field">

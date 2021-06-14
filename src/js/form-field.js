@@ -18,4 +18,4 @@
             element.onfocus = () => setActive(element, true);
         }
     )
-})()
+})();

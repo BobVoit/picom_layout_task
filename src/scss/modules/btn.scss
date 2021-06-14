@@ -8,6 +8,10 @@
 
     transition: background-color .2s linear;
 
+    &:focus-visible {
+        outline: 1px solid map-get($colors, focus-browser);
+    }
+
     &::after, &::before {
         position: absolute;
         content: "";
@@ -106,6 +110,10 @@
 
     transition: all 0.3s linear;
 
+    &:focus-visible {
+        outline: 1px solid map-get($colors, focus-browser);
+    }
+
     @media (max-width: $mobile) {
         padding: 1em 3.5em;
     }
@@ -157,6 +165,10 @@
     border-radius: 50%;
 
     transition: all 0.2s linear;
+
+    &:focus-visible {
+        outline: 1px solid map-get($colors, focus-browser);
+    }
 
     span {
         transition: all 0.2s linear;

@@ -19,15 +19,16 @@ $(document).ready(function() {
         setProgress(elements[currentSlide].childNodes[0].childNodes[1])
     });
 
-    // const frequencyOfChangingSlides = 3000;
-    // let dotsLoop = setInterval(() => {
-    //     // setTimeout(() => {
-    //     $('.slider').slick('slickNext');
-    //     // }, frequencyOfChangingSlides);
-    // }, frequencyOfChangingSlides);
-
     $('.collection-slider').slick({
-        appendArrows: $('.collection__arrows'),
+        appendArrows: $('.collection__arrows--in-info'),
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    appendArrows: $('.collection__arrows--in-images'),
+                }
+            }
+        ],
     });
 });
 
@@ -53,7 +54,7 @@ function clearProgress(node, idInternal) {
 function setProgress(element, perscent = 0) {
     const radius = element.r.baseVal.value;
     const circumference = 2 * Math.PI * radius;
-    const offset = circumference - perscent / 100 * circumference;
+    const offset = -(circumference - perscent / 100 * circumference);
     element.style.strokeDashoffset = offset;
 }
 

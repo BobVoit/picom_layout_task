@@ -56,22 +56,22 @@
     &--in-info {
         margin-top: 7.2rem;
         
-        @media (max-width: $tablet) {
-            display: none;
-        }
+        // @media (max-width: $tablet) {
+        //     display: none;
+        // }
     }
 
     &--in-images {
-        display: none;
+        display: flex;
         position: absolute;
         bottom: 10%;
         left: 50%;
 
         transform: translateX(-50%);
 
-        @media (max-width: $tablet) {
-            display: flex;
-        }
+        // @media (max-width: $tablet) {
+        //     display: flex;
+        // }
 
         & *:first-child {
             margin-right: 0.5px;

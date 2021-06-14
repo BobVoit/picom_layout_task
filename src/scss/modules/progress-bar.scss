@@ -2,6 +2,10 @@
     width: 6.4rem;
     height: 6.4rem;
     cursor: pointer;
+
+    &:focus-visible {
+        outline: 1px solid map-get($colors, focus-browser);
+    }
 }
 
 .progress-bar__static {

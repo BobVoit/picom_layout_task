@@ -1,6 +1,10 @@
 .link {
     color: map-get($colors, black);
 
+    &:focus-visible {
+        outline: 1px solid map-get($colors, focus-browser);
+    }
+
     &:hover, &:active {
         color: map-get($colors, primary);
     }
@@ -14,6 +18,10 @@
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 3.24rem;
+
+    &:focus-visible {
+        outline: 1px solid map-get($colors, focus-browser);
+    }
 
     span {
         display: block;
@@ -41,6 +49,10 @@
     font-weight: 500;
     font-size: 1.8rem;  
     line-height: 3.24rem;
+
+    &:focus-visible {
+        outline: 1px solid map-get($colors, focus-browser);
+    }
 
     &:hover, &:active {
         text-decoration: underline;
@@ -71,5 +83,9 @@
 
     &:hover, &:active {
         color: map-get($colors, black);
+    }
+
+    &:focus-visible {
+        outline: 1px solid map-get($colors, focus-browser);
     }
 }

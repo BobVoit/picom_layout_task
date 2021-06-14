@@ -1,6 +1,11 @@
 
-// const circle = document.querySelector('.progress-bar__circle');
+
+// while (!document.querySelector('.progress-bar')) {}
+// const circle = document.querySelectorAll('.progress-bar');
 // console.log(circle);
+
+
+
 // const radius = circle.r.baseVal.value; // длина окружности
 
 // const circumference = 2 * Math.PI * radius;

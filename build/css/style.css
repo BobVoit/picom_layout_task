@@ -521,9 +521,36 @@ picture {
 .progress-bar {
   width: 6.4rem;
   height: 6.4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  cursor: pointer;
+}
+
+.progress-bar__static {
+  stroke: #7E8385;
+  stroke-width: 2;
+  fill: none;
+}
+
+.progress-bar__border {
+  stroke: #FF5F01;
+  stroke-width: 2;
+  fill: none;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.progress-bar__text {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  fill: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
 }
 
 .row {
@@ -574,11 +601,16 @@ picture {
 .header {
   width: 100%;
   height: 10rem;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1;
   background-color: #FFFFFF;
   color: #363131;
   font-family: "Noto Sans", sans-serif;
+  -webkit-transition: top 0.3s linear;
+  -o-transition: top 0.3s linear;
+  transition: top 0.3s linear;
 }
 
 .header::before {
@@ -815,6 +847,7 @@ picture {
   width: 100%;
   position: relative;
   height: 63.4rem;
+  margin-top: 10rem;
 }
 
 .present__container {
@@ -2620,15 +2653,6 @@ picture {
     line-height: 3rem;
   }
 
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    -webkit-transition: top 0.3s linear;
-    -o-transition: top 0.3s linear;
-    transition: top 0.3s linear;
-  }
-
   .header.hide {
     top: -10rem;
   }
@@ -2652,10 +2676,6 @@ picture {
 
   .header__burger {
     display: block;
-  }
-
-  .present {
-    margin-top: 6rem;
   }
 
   .present__title {

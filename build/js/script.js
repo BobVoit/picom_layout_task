@@ -157,8 +157,6 @@ function createCustomDot(slider, i) {
 (function() { 
     const formsControls = document.querySelectorAll('.form__field--required');
     formsControls.forEach(element => {
-        // const fieldWrapper = getChildNodeByClassName(element.childNodes, 'form__field');
-        // const field = getChildNodeByClassName(fieldWrapper.childNodes, 'form__field')
         const field = element.querySelector('input') || element.querySelector('textarea') || null;
         field.addEventListener('change', (e) => {
             console.log(e);
@@ -170,42 +168,7 @@ function createCustomDot(slider, i) {
         })
     })
 })();
-
-
-// while (!document.querySelector('.progress-bar')) {}
-// const circle = document.querySelectorAll('.progress-bar');
-// console.log(circle);
-
-
-
-// const radius = circle.r.baseVal.value; // длина окружности
-
-// const circumference = 2 * Math.PI * radius;
-
-// circle.style.strokeDasharray = `${circumference} ${circumference}`;
-// circle.style.strokeDashoffset    = circumference;
-
-// function setProgress(perscent) {
-//     const offset = circumference - perscent / 100 * circumference;
-//     circle.style.strokeDashoffset = offset;
-
-// }
-
-// setProgress(70);
-// (function () { 
-//     document.querySelectorAll('.footer__col').forEach((element) => {
-//         element.addEventListener('click', (e) => {
-//             if (!($(e.target).closest('.footer__col').length)) {
-//                 element.classList.remove('active');
-//             } else {
-//                 element.classList.add('active');
-//             }
-//         });
-
-//     });
-// })();
 $(document).ready(function() {
-    // console.log($('footer__col'));
     $('.footer__col').each(function(index, element) {
         $(document).mouseup(function(e) {
             if (!($(e.target).closest(element).length)) {

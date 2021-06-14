@@ -1717,8 +1717,6 @@ picture {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .popular__image-item {
@@ -2480,6 +2478,15 @@ picture {
   .h4 {
     line-height: 2rem;
   }
+
+  .popular__image-item {
+    width: 25%;
+    padding: 0 1rem;
+  }
+
+  .popular__image-item img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1224px) {
@@ -2548,11 +2555,17 @@ picture {
   .popular__images {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   .popular__image-item {
     width: 50%;
     margin: 2rem 0;
+  }
+
+  .popular__image-item img {
+    width: auto;
   }
 
   .form__info {
@@ -2869,7 +2882,6 @@ picture {
   }
 
   .popular__image-item img {
-    width: 100%;
     margin: 0 5rem;
   }
 

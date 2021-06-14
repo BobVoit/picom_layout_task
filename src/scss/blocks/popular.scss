@@ -13,10 +13,10 @@
     display: flex;
     margin-top: 6.2rem;
     justify-content: space-between;
-    flex-wrap: wrap;
 
     @media (max-width: $desktop-m) {
         justify-content: space-around;
+        flex-wrap: wrap;
     }
 
     @media (max-width: $tablet) {
@@ -30,6 +30,11 @@
 .popular__image-item {
     display: flex;
     justify-content: center;
+
+    @media (max-width: $desktop-l) {
+        width: 25%;
+        padding: 0 1rem;
+    }
 
     @media (max-width: $desktop-m) {
         width: 50%;
@@ -45,13 +50,19 @@
     }
 
     img {
-        @media (max-width: $tablet) {
+        @media (max-width: $desktop-l) {
             width: 100%;
+        }
+
+        @media (max-width: $desktop-m) {
+            width: auto;
+        }
+
+        @media (max-width: $tablet) {
             margin: 0 5rem;
         }
 
         @media (max-width: $mobile) {
-            // width: 100%;
         }
     }
 }

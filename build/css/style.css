@@ -2881,23 +2881,6 @@ picture {
             transform: translateY(-100%);
   }
 
-  .popular__images {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    margin: 0 1rem;
-  }
-
-  .popular__image-item {
-    width: 100%;
-  }
-
   .form__fields {
     display: block;
   }
@@ -3025,6 +3008,23 @@ picture {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
+  }
+
+  .popular__images {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 0 1rem;
+  }
+
+  .popular__image-item {
+    width: 100%;
   }
 
   .popular__image-item img {

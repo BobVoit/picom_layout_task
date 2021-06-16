@@ -46,10 +46,12 @@
     }
 
     @media (max-width: $mobile) {
-        width: 100%;
+        // padding: 0 1rem;
     }
 
     img {
+        overflow: hidden;
+        object-fit: cover;
         @media (max-width: $desktop-l) {
             width: 100%;
         }
@@ -58,11 +60,9 @@
             width: auto;
         }
 
-        @media (max-width: $tablet) {
-            margin: 0 5rem;
-        }
-
         @media (max-width: $mobile) {
+            width: 100%;
+            // padding: 0 rem;
         }
     }
 }

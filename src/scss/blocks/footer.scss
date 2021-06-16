@@ -59,6 +59,10 @@
     }
 }
 
+.footer__social-link {
+    display: block;
+}
+
 .footer__content {
     display: flex;
     width: 100%;
@@ -160,26 +164,6 @@
 
             & .footer__items {
                 display: block;
-                position: absolute;
-                padding: 2.4rem;
-                top: 0;
-                left: -2rem;
-                z-index: 5;
-                
-                cursor: default;
-                border-radius: 4px;
-                background-color: map-get($colors, white);
-                box-shadow: -2px 4px 24px 0px rgba(#000000, 0.06);
-
-                transform: translate(0, -100%);
-
-                li {
-                    padding: 0 2rem;
-                    width: 100%;
-
-                    transition: box-shadow 0.2s linear;
-                    
-                }
             }
         }
 
@@ -201,9 +185,39 @@
 }
 
 .footer__items {
+    width: 100%;
+    overflow: hidden;
 
     @media (max-width: $desktop-s) {
+        width: 40rem;
         display: none;
+        position: absolute;
+        padding: 2.4rem;
+        top: 0;
+        left: -50%;
+        z-index: 5;
+        
+        cursor: default;
+        border-radius: 4px;
+        background-color: map-get($colors, white);
+        box-shadow: -2px 4px 24px 0px rgba(#000000, 0.06);
+
+        transform: translateY(-100%);
+
+        li {
+            padding: 0 2rem;
+            width: 100%;
+
+            transition: box-shadow 0.2s linear;
+            
+        }
+    }
+
+    @media (max-width: $mobile) {
+        top: 0;
+        left: 50%;
+
+        transform: translateX(-50%);
     }
 }
 
@@ -212,6 +226,7 @@
 
     color: inherit;
     line-height: 3.84rem;
+    font-size: 1.6rem;
 
     &:hover {
         color: map-get($colors, primary);

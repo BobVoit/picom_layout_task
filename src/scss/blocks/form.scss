@@ -65,6 +65,15 @@
     transition: all .1s linear;  
 }
 
+.star {
+
+    transition: color .1s linear;
+    
+    &--red {
+        color: map-get($colors, error);
+    }
+}
+
 .form__field {
     width: 100%;
     height: 8rem;
@@ -104,6 +113,9 @@
                 color: map-get($colors, dark-gray);
             }
         }
+        & .star {
+            color: map-get($colors, dark-gray);
+        }
     }
 
     &--is-filled { 
@@ -114,6 +126,9 @@
             .form__label {
                 color: map-get($colors, dark-gray);
             }
+        }
+        & .star {
+            color: map-get($colors, dark-gray);
         }
     }
 
@@ -192,12 +207,6 @@
     color: map-get($colors, error);
 
     transform: translateY(-50%);
-}
-
-.star {
-    &--red {
-        color: map-get($colors, error);
-    }
 }
 
 .form__send {

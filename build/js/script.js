@@ -143,6 +143,9 @@ function createCustomDot(slider, i) {
     svg.appendChild(text);
     return svg;
 }
+const PHONE_NUMBER_MASK_LENGTH = 18;
+
+// создание эффекта для label форм ввода
 (function() {
     const setActive = (element, active) => {
         const formField = element.parentNode.parentNode;
@@ -150,9 +153,17 @@ function createCustomDot(slider, i) {
             formField.classList.add('form__field--is-active');
         } else {
             formField.classList.remove('form__field--is-active');
-            element.value === '' ?
-                formField.classList.remove('form__field--is-filled') :
-                formField.classList.add('form__field--is-filled');
+            if (element.type === 'tel') {
+                if (isNaN(parseInt(element.value[17]))) {
+                    formField.classList.remove('form__field--is-filled');
+                } else {
+                    formField.classList.add('form__field--is-filled');
+                }
+            } else {
+                element.value === '' ?
+                    formField.classList.remove('form__field--is-filled') :
+                    formField.classList.add('form__field--is-filled');
+            }
         }
     }
     
@@ -187,7 +198,6 @@ function createCustomDot(slider, i) {
     const phonenumberRegExp = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
     const emailRegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     const orderForm = document.querySelector('.order__form');
-    console.log(orderForm);
     orderForm.addEventListener('submit', (e) => {
         e.preventDefault();
 

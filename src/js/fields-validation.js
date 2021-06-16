@@ -21,7 +21,6 @@
     const phonenumberRegExp = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
     const emailRegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     const orderForm = document.querySelector('.order__form');
-    console.log(orderForm);
     orderForm.addEventListener('submit', (e) => {
         e.preventDefault();
 

@@ -4,38 +4,66 @@
             <h4 class="h2 order__title">
                 Закажите индивидуальную коллекцию
             </h4>
-            <form class="form order__form" action="#">
+            <form class="form order__form" name="order-form" action="#" id="order-form">
                 <div class="order-display form__fields">
-                    <div class="order-display__fullname form__field form__field--required">
-                        <div class="form__control">
-                            <label for="order-fullname" class="form__label">ФИО<span class="star--red">*</span></label>
-                            <input id="order-fullname" class="form__fullname form__input" type="text">
-                            <span class="form__error">Обязательное поле!</span>    
+                    <div class="form__left">
+                        <div class="form__fullname form__field form__field--required">
+                            <div class="form__control">
+                                <label for="order-fullname" class="form__label">ФИО<span class="star--red">*</span></label>
+                                <input 
+                                    id="order-fullname" 
+                                    name="fullname"
+                                    class="form__fullname form__input" 
+                                    type="text" 
+                                >
+                                <span class="form__error"></span>    
+                            </div>
+                        </div>
+                        <div class="form__phonenumber form__field form__field--required">
+                            <div class="form__control">
+                                <label for="order-phonenumber" class="form__label">Телефон<span class="star--red">*</span></label>
+                                <input 
+                                    id="order-phonenumber" 
+                                    name="phonenumber"
+                                    class="form__phonenumber form__input" 
+                                    type="tel"
+                                >
+                                <span class="form__error"></span>        
+                            </div>
+                        </div>
+                        <div class="form__email form__field">
+                            <div class="form__control">
+                                <label for="order-email" class="form__label">E-mail</label>
+                                <input 
+                                    id="order-email"
+                                    name="email"
+                                    class="form__email form__input"
+                                >
+                                <span class="form__error"></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="order-display__phonenumber form__field form__field--required">
-                        <div class="form__control">
-                            <label for="order-phonenumber" class="form__label">Телефон<span class="star--red">*</span></label>
-                            <input id="order-phonenumber" class="form__phonenumber form__input" type="text">
-                            <span class="form__error">Обязательное поле!</span>        
+                    <div class="form__right">
+                        <div class="form__company form__field">
+                            <div class="form__control">
+                                <label for="order-company" class="form__label">Компания</label>
+                                <input 
+                                    id="order-company" 
+                                    name="company"
+                                    class="form__company form__input" 
+                                    type="text"
+                                >
+                            </div>
                         </div>
-                    </div>
-                    <div class="order-display__email form__field">
-                        <div class="form__control">
-                            <label for="order-email" class="form__label">E-mail</label>
-                            <input id="order-email" class="form__email form__input" type="text">
-                        </div>
-                    </div>
-                    <div class="order-display__company form__field">
-                        <div class="form__control">
-                            <label for="order-company" class="form__label">Компания</label>
-                            <input id="order-company" class="form__company form__input" type="text">
-                        </div>
-                    </div>
-                    <div class="order-display__message form__field form__field--textarea">
-                        <div class="form__control">
-                            <label for="order-message" class="form__label">Сообщение<span></span></label>
-                            <textarea id="order-message" class="form__message form__textarea"></textarea>
+                        <div class="form__message form__field form__field--textarea">
+                            <div class="form__control">
+                                <label for="order-message" class="form__label">Сообщение<span></span></label>
+                                <textarea 
+                                    id="order-message" 
+                                    name="message"
+                                    class="form__message form__textarea"
+                                ></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>

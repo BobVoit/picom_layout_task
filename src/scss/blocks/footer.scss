@@ -160,16 +160,16 @@
 
             & .footer__items {
                 display: block;
-                width: 100%;
                 position: absolute;
+                padding: 2.4rem;
                 top: 0;
-                left: 0;
+                left: -2rem;
                 z-index: 5;
                 
                 cursor: default;
                 border-radius: 4px;
                 background-color: map-get($colors, white);
-                box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+                box-shadow: -2px 4px 24px 0px rgba(#000000, 0.06);
 
                 transform: translate(0, -100%);
 
@@ -179,11 +179,6 @@
 
                     transition: box-shadow 0.2s linear;
                     
-                    border-bottom: .5px solid map-get($colors, frame-line);
-
-                    &:last-child {
-                        border-bottom: none;
-                    }
                 }
             }
         }
@@ -239,13 +234,17 @@
     }
 
     &::before {
+        display: block;
         content: "";
-        display: none;
+        visibility: hidden;
         position: absolute;
         left: 0;
         bottom: 0;
-        width: 100%;
+        width: 0;
         height: 1px;
+        opacity: 0;
+
+        transition: opacity .2s linear;
 
         background-color: map-get($colors, primary);
     }
@@ -253,8 +252,10 @@
     &:hover {
 
         &::before {
-            display: block;
+            visibility: visible;
+            width: 100%;
 
+            opacity: 1;
         }
     }
 }

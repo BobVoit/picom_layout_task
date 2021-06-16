@@ -1,5 +1,6 @@
 @@include('./jquery.min.js')
 @@include('./slick.min.js')
+@@include('./jquery.maskedinput.min.js')
 @@include('./burger.js')
 @@include('./header-scroll.js')
 @@include('./slider.js')

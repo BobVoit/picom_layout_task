@@ -15,9 +15,12 @@ $(document).ready(function() {
     let idInternal = move(elements[0].childNodes[0].childNodes[1]);
     $('.slider').on('beforeChange', (event, slick, currentSlide, nextSlide) => {
         clearInterval(idInternal);
-        idInternal = move(elements[nextSlide].childNodes[0].childNodes[1]);
         setProgress(elements[currentSlide].childNodes[0].childNodes[1])
     });
+
+    $('.slider').on('afterChange', (event, slick, currentSlide) => {
+        idInternal = move(elements[currentSlide].childNodes[0].childNodes[1]);
+    })
 
     $('.collection-slider').slick({
         appendArrows: $('.collection__arrows--in-info'),

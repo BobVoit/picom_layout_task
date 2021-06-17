@@ -207,10 +207,8 @@ const PHONE_NUMBER_MASK_LENGTH = 18;
             values[key] = formData.get(key);
         }
 
-        console.log(values.phonenumber);
 
         if (values.fullname.trim() == '') {
-            console.log(1);
             orderForm
                 .querySelector('.form__fullname')
                 .classList
@@ -222,7 +220,6 @@ const PHONE_NUMBER_MASK_LENGTH = 18;
         }
 
         if (values.phonenumber.trim() == '') {
-            console.log(2);
             orderForm
                 .querySelector('.form__phonenumber .form__error')
                 .innerHTML == "Обязательное поле!";
@@ -239,15 +236,11 @@ const PHONE_NUMBER_MASK_LENGTH = 18;
         }
 
         if (values.email.trim() != '' && !emailRegExp.test(values.email.trim())) {
-            console.log(5);
-            console.log(orderForm.querySelector('.form__email .form__error'));
             orderForm
                 .querySelector('.form__email .form__error')
                 .innerHTML == "Неверный формат";
             return false;
         }        
-
-        console.log('ок');
 
         return true;
     })
